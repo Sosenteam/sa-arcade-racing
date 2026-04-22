@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cxhgrop6cvlou"]
+
+[ext_resource type="Script" uid="uid://7cvivu0ekkpb" path="res://scenes/splitscreen.gd" id="1_lt01p"]
+
+[node name="Splitscreen" type="Control" unique_id=1230675636]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lt01p")
+
+[node name="Grid" type="GridContainer" parent="." unique_id=540747421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

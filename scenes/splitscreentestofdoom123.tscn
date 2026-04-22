@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://d2nv317sx3cf0"]
 
+[ext_resource type="Script" uid="uid://ba77kb0xucdt3" path="res://scenes/splitscreentest.gd" id="1_gl3pd"]
 [ext_resource type="PackedScene" uid="uid://ckiors8dsr0t8" path="res://assets/cars/Models/FBX format/ambulance.fbx" id="1_h07tm"]
 [ext_resource type="PackedScene" uid="uid://cyra10uw27oi" path="res://assets/cars/Models/FBX format/box.fbx" id="2_45wqm"]
+[ext_resource type="PackedScene" uid="uid://cxhgrop6cvlou" path="res://scenes/splitscreen.tscn" id="4_burei"]
 
 [node name="Splitscreentestofdoom123" type="Node3D" unique_id=1696641891]
+script = ExtResource("1_gl3pd")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1378260105]
 transform = Transform3D(17.189926, 0, 0, 0, 1, 0, 0, 0, 42.57945, 0, 0, -11.076428)
@@ -14,58 +17,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23270702, 0, 0.6618335)
 [node name="box" parent="." unique_id=84927512 instance=ExtResource("2_45wqm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7218015, 2.259767, -6.409936)
 
-[node name="Control" type="Control" parent="." unique_id=357947151]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GridContainer" type="GridContainer" parent="Control" unique_id=299082882]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-columns = 2
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Control/GridContainer" unique_id=763602701]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="Control/GridContainer/SubViewportContainer" unique_id=1652538189]
-handle_input_locally = false
-size = Vector2i(574, 648)
-render_target_update_mode = 4
-
-[node name="Player 1" type="Camera3D" parent="Control/GridContainer/SubViewportContainer/SubViewport" unique_id=1703616410]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6360517, 2.7820017, -3.837009)
-
-[node name="SubViewportContainer2" type="SubViewportContainer" parent="Control/GridContainer" unique_id=1299769861]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="Control/GridContainer/SubViewportContainer2" unique_id=2114336789]
-handle_input_locally = false
-size = Vector2i(574, 648)
-render_target_update_mode = 4
-
-[node name="Player 1" type="Camera3D" parent="Control/GridContainer/SubViewportContainer2/SubViewport" unique_id=1178504516]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6360517, 2.7820017, -3.837009)
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1902972381]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=992225590]
 transform = Transform3D(0.68711287, -0.55856204, 0.4646336, 0, 0.6395061, 0.768786, -0.7265507, -0.52824277, 0.43941286, 0, 4.2594843, 5.7822237)
+
+[node name="Splitscreen" parent="." unique_id=1230675636 instance=ExtResource("4_burei")]
+
+[node name="third" type="Node3D" parent="." unique_id=1948142930]
+transform = Transform3D(-0.98765284, 0, -0.15665862, 0, 1, 0, 0.15665862, 0, -0.98765284, 2.7803636, 3.067, -11.144573)
+
+[node name="second" type="Node3D" parent="." unique_id=1709374828]
+transform = Transform3D(-0.98765284, 0, -0.15665862, 0, 1, 0, 0.15665862, 0, -0.98765284, 0, 6.695924, -15.342304)
+
+[node name="first" type="Node3D" parent="." unique_id=1632582727]
+transform = Transform3D(-0.98765284, 0, -0.15665862, 0, 1, 0, 0.15665862, 0, -0.98765284, 0, 3.347962, -7.671152)
