@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c80xdvmbe4l7s"]
+
+[ext_resource type="Script" uid="uid://bttd5kx015neg" path="res://components/car_controller.gd" id="1_h6xqb"]
+
+[node name="CarController" type="Node" unique_id=369300745]
+script = ExtResource("1_h6xqb")
