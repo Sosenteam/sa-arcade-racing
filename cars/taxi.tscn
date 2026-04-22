@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b1aa1hfnlj4aq"]
+
+[ext_resource type="PackedScene" uid="uid://dk2tfnl52ap3m" path="res://assets/cars/Models/FBX format/taxi.fbx" id="1_k84w7"]
+
+[node name="Taxi" unique_id=1045475397 instance=ExtResource("1_k84w7")]
+
+[node name="wheel-front-right" parent="taxi" parent_id_path=PackedInt32Array(1586723274) index="1" unique_id=157446204]
+visible = false
+
+[node name="wheel-front-left" parent="taxi" parent_id_path=PackedInt32Array(1586723274) index="2" unique_id=722979190]
+visible = false
+
+[node name="wheel-back-left" parent="taxi" parent_id_path=PackedInt32Array(1586723274) index="3" unique_id=275166864]
+visible = false
+
+[node name="wheel-back-right" parent="taxi" parent_id_path=PackedInt32Array(1586723274) index="4" unique_id=432960171]
+visible = false
