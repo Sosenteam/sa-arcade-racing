@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://dn470ikknlvmc"]
-
-[ext_resource type="ArrayMesh" uid="uid://noyhl2qgob84" path="res://assets/cars/Models/OBJ format/taxi.obj" id="1_vd0e4"]
-
-[node name="TestCar" type="VehicleBody3D" unique_id=1380004806]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=12217445]
-mesh = ExtResource("1_vd0e4")
