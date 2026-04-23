@@ -20,18 +20,21 @@ var keyboard_enabled = true # Turn off for export?
 
 
 func _input(event: InputEvent) -> void:
-	if keyboard_enabled:
+	if keyboard_enabled && event is InputEventAction:
 		non_controller_input(event)
 	if event.device != player_device:
 		return
 	if event is InputEventJoypadMotion:
 		if(event.axis == 0): #Left Stick Horizontal
-			car.steering = event.axis_value*max_steering_angle
+			car.steering = -event.axis_value*max_steering_angle
+		if event.axis == 4: ## Brake
+			car.brake = event.axis_value*braking_multiplier
+		elif event.axis == 5: ## Accelerate
+			car.engine_force = event.axis_value*acceleration_multiplier
+		#print("axis ",event.axis,"button value ",event.axis_value)
 	if event is InputEventJoypadButton:
-		if event.button_index == 6: ## Brake
-			car.brake = event.pressure*braking_multiplier
-		elif event.button_index == 7: ## Accelerate
-			car.engine_force = event.pressure*acceleration_multiplier
+		#print("button ",event.button_index,"button value ",event.pressure)
+		pass
 	
 func non_controller_input(event: InputEvent):
 	# Steering
