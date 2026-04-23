@@ -183,7 +183,7 @@ shadow_mesh = SubResource("ArrayMesh_14wl3")
 size = Vector3(0.8388672, 0.9643936, 2.4880219)
 
 [node name="Taxi" type="VehicleBody3D" unique_id=1380004806]
-mass = 1000.0
+mass = 2000.0
 
 [node name="CarController" parent="." unique_id=369300745 instance=ExtResource("1_ybqpl")]
 
@@ -194,6 +194,7 @@ mesh = SubResource("ArrayMesh_ybqpl")
 [node name="WheelFrontRight" type="VehicleWheel3D" parent="." unique_id=1583055497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.3, 0.76)
 use_as_steering = true
+wheel_roll_influence = 1.0
 
 [node name="wheel-front-right" type="MeshInstance3D" parent="WheelFrontRight" unique_id=473952302]
 mesh = SubResource("ArrayMesh_pqtw4")
@@ -201,6 +202,7 @@ mesh = SubResource("ArrayMesh_pqtw4")
 [node name="WheelFrontLeft" type="VehicleWheel3D" parent="." unique_id=594363769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.3, 0.76)
 use_as_steering = true
+wheel_roll_influence = 1.0
 
 [node name="wheel-front-left" type="MeshInstance3D" parent="WheelFrontLeft" unique_id=1850046439]
 mesh = SubResource("ArrayMesh_470sy")
@@ -208,6 +210,7 @@ mesh = SubResource("ArrayMesh_470sy")
 [node name="WheelBackLeft" type="VehicleWheel3D" parent="." unique_id=1677156580]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.3, -0.76)
 use_as_traction = true
+wheel_roll_influence = 1.0
 
 [node name="wheel-back-left" type="MeshInstance3D" parent="WheelBackLeft" unique_id=745166664]
 mesh = SubResource("ArrayMesh_omx1y")
@@ -215,6 +218,7 @@ mesh = SubResource("ArrayMesh_omx1y")
 [node name="WheelBackRight" type="VehicleWheel3D" parent="." unique_id=51803587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.3, -0.76)
 use_as_traction = true
+wheel_roll_influence = 1.0
 
 [node name="wheel-back-right" type="MeshInstance3D" parent="WheelBackRight" unique_id=1800139186]
 mesh = SubResource("ArrayMesh_eqqwv")

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://rdsp110vf0pj"]
+
+[ext_resource type="PackedScene" uid="uid://dn470ikknlvmc" path="res://cars/taxi.tscn" id="1_g7g4h"]
+[ext_resource type="Texture2D" uid="uid://banlmhddwy3vt" path="res://assets/racing-kit/GLTF format/flagCheckers_checkers.png" id="2_j8ivh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a5oyu"]
+size = Vector3(100, 0.001, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nd71p"]
+albedo_texture = ExtResource("2_j8ivh")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7ddre"]
+material = SubResource("StandardMaterial3D_nd71p")
+size = Vector2(100, 100)
+
+[node name="TestScene" type="Node3D" unique_id=766446692]
+
+[node name="Taxi" parent="." unique_id=1380004806 instance=ExtResource("1_g7g4h")]
+transform = Transform3D(0.494837, 0, -0.86898583, 0, 1, 0, 0.86898583, 0, 0.494837, 0, 0.33962095, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Taxi" unique_id=33398264]
+transform = Transform3D(-0.8193852, -0.13792762, 0.55640286, 0.0076684677, 0.967898, 0.25122672, -0.5731923, 0.21011814, -0.7920233, 2.040601, 2.8185792, -3.0080473)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1736862162]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=369456463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2344666, -0.4995, 0)
+shape = SubResource("BoxShape3D_a5oyu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=932392245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7295954, 0)
+mesh = SubResource("PlaneMesh_7ddre")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1431039333]
+transform = Transform3D(-0.97319895, 0, 0.22996473, 0.19893216, 0.50167686, 0.8418707, -0.115367986, 0.8650551, -0.4882314, 0, 0, 0)
