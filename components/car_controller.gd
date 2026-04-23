@@ -12,7 +12,7 @@ class_name CarController extends Node
 
 @export var player_device = 0 #What Controller to Listen to
 
-@export var max_steering_angle = PI/4
+@export var max_steering_angle = PI/8
 @export var braking_multiplier = 20
 @export var acceleration_multiplier = 10000
 

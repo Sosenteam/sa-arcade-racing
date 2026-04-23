@@ -184,6 +184,9 @@ size = Vector3(0.8388672, 0.9643936, 2.4880219)
 
 [node name="Taxi" type="VehicleBody3D" unique_id=1380004806]
 mass = 2000.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0.2, 0)
+can_sleep = false
 
 [node name="CarController" parent="." unique_id=369300745 instance=ExtResource("1_ybqpl")]
 acceleration_multiplier = 17950

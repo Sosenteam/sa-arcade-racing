@@ -17,8 +17,6 @@ size = Vector2(100, 100)
 
 [node name="Taxi" parent="." unique_id=1380004806 instance=ExtResource("1_g7g4h")]
 transform = Transform3D(0.494837, 0, -0.86898583, 0, 1, 0, 0.86898583, 0, 0.494837, 0, 0.33962095, 0)
-center_of_mass_mode = 1
-center_of_mass = Vector3(0, 0.2, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Taxi" unique_id=33398264]
 transform = Transform3D(-1.0000001, -2.2036605e-08, 8.459982e-08, 0, 0.9677093, 0.25206932, -8.7422784e-08, 0.25206938, -0.9677091, 0, 2.819, -3.008)
