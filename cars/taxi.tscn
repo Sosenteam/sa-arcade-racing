@@ -186,6 +186,7 @@ size = Vector3(0.8388672, 0.9643936, 2.4880219)
 mass = 2000.0
 
 [node name="CarController" parent="." unique_id=369300745 instance=ExtResource("1_ybqpl")]
+acceleration_multiplier = 17950
 
 [node name="Body" type="MeshInstance3D" parent="." unique_id=1043516113]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, -0.025)
