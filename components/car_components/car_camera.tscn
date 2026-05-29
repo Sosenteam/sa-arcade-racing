@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://joxhmawk88j8"]
+
+[ext_resource type="Script" uid="uid://dd8ua4vwg11jh" path="res://components/car_components/car_camera.gd" id="1_3l7ih"]
+
+[node name="CarCamera" type="Node3D" unique_id=1603456442]
+top_level = true
+script = ExtResource("1_3l7ih")
+
+[node name="shaker" type="Node3D" parent="." unique_id=983041805]

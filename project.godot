@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="SA Racing"
-run/main_scene="uid://rdsp110vf0pj"
+run/main_scene="uid://hhom5r02cj5p"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Cars="*uid://rhpfod2aqaqp"
 
 [input]
 

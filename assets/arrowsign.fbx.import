@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://iqwp80qpe50j"
-path="res://.godot/imported/sedan.fbx-95c6f3b196bfff29d1ca956ec1ce6233.scn"
+uid="uid://d3qae1ca0retj"
+path="res://.godot/imported/arrowsign.fbx-3924401fd38052cb29c8f2c41c0d66ce.scn"
 
 [deps]
 
-source_file="res://assets/cars/Models/FBX format/sedan.fbx"
-dest_files=["res://.godot/imported/sedan.fbx-95c6f3b196bfff29d1ca956ec1ce6233.scn"]
+source_file="res://assets/arrowsign.fbx"
+dest_files=["res://.godot/imported/arrowsign.fbx-3924401fd38052cb29c8f2c41c0d66ce.scn"]
 
 [params]
 
-nodes/root_type="VehicleBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

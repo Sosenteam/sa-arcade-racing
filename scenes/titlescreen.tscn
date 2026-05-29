@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://brtmdebkpsht"]
+
+[ext_resource type="PackedScene" uid="uid://c5dsdpb3dck8o" path="res://assets/maps/sa/sa.fbx" id="1_6d6rd"]
+[ext_resource type="Script" uid="uid://bwfhcqke6wmnh" path="res://scenes/titlescreen_camera.gd" id="2_3jj3l"]
+[ext_resource type="Texture2D" uid="uid://bd57vi6nbfb4u" path="res://assets/textures/golden_gate_hills_2k.hdr" id="2_tt55a"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t7v6v"]
+panorama = ExtResource("2_tt55a")
+
+[sub_resource type="Sky" id="Sky_vhbaf"]
+sky_material = SubResource("PanoramaSkyMaterial_t7v6v")
+
+[sub_resource type="Environment" id="Environment_v6ms7"]
+background_mode = 2
+sky = SubResource("Sky_vhbaf")
+tonemap_mode = 3
+tonemap_exposure = 1.05
+
+[node name="Titlescreen" type="Node3D" unique_id=36524074]
+
+[node name="sa" parent="." unique_id=33611147 instance=ExtResource("1_6d6rd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5802674, 18.747034, 1.0056968)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1533412456 node_paths=PackedStringArray("center_of_rot")]
+transform = Transform3D(0.82142806, 0.25869456, -0.50826484, 0, 0.89120454, 0.45360166, 0.5703122, -0.37260112, 0.73206043, -33.16047, 80.65457, 38.367855)
+environment = SubResource("Environment_v6ms7")
+script = ExtResource("2_3jj3l")
+center_of_rot = NodePath("../centerofrotation")
+
+[node name="centerofrotation" type="Node3D" parent="." unique_id=2075035535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.80899, 81.79314, -107.02378)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=406095623]
+transform = Transform3D(0.54112124, 0.71017456, -0.45037752, 0, 0.5355615, 0.84449625, 0.8409446, -0.45697486, 0.28980374, -32.091263, 185.97418, -3.0517578e-05)

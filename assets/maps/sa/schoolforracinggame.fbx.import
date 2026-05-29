@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://iqwp80qpe50j"
-path="res://.godot/imported/sedan.fbx-95c6f3b196bfff29d1ca956ec1ce6233.scn"
+uid="uid://cyl3bh80pcgqx"
+path="res://.godot/imported/schoolforracinggame.fbx-4e9c6dfeee13463b53e92ed0d8946253.scn"
 
 [deps]
 
-source_file="res://assets/cars/Models/FBX format/sedan.fbx"
-dest_files=["res://.godot/imported/sedan.fbx-95c6f3b196bfff29d1ca956ec1ce6233.scn"]
+source_file="res://assets/maps/sa/schoolforracinggame.fbx"
+dest_files=["res://.godot/imported/schoolforracinggame.fbx-4e9c6dfeee13463b53e92ed0d8946253.scn"]
 
 [params]
 
-nodes/root_type="VehicleBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

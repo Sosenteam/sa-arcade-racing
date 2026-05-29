@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cg86ejwxc5yvf"]
+
+[node name="Lap Counter" type="Control" unique_id=1631022207]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1261513286]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -208.0
+offset_top = -96.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=259326013]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Lap 1/3"

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://hhom5r02cj5p"]
+
+[ext_resource type="Script" uid="uid://djgiynoxce0kj" path="res://scenes/race.gd" id="1_8oh5l"]
+[ext_resource type="PackedScene" uid="uid://joxhmawk88j8" path="res://components/car_components/car_camera.tscn" id="2_h7xf4"]
+[ext_resource type="PackedScene" uid="uid://cxhgrop6cvlou" path="res://scenes/splitscreen.tscn" id="2_lrjie"]
+[ext_resource type="PackedScene" uid="uid://chjns16yrjlrb" path="res://components/car_components/car_sounds.tscn" id="3_w5r77"]
+[ext_resource type="PackedScene" uid="uid://cg86ejwxc5yvf" path="res://scenes/lapcounter.tscn" id="4_6epbv"]
+[ext_resource type="PackedScene" uid="uid://bs6voxnonrwca" path="res://scenes/racemaps/sa.tscn" id="6_6epbv"]
+[ext_resource type="AudioStream" uid="uid://cewbam0do17b3" path="res://assets/music/alec.wav" id="6_ctjv4"]
+
+[node name="Race" type="Node3D" unique_id=1338385145]
+script = ExtResource("1_8oh5l")
+car_camera = ExtResource("2_h7xf4")
+car_sounds = ExtResource("3_w5r77")
+lap_counter = ExtResource("4_6epbv")
+
+[node name="Splitscreen" parent="." unique_id=1230675636 instance=ExtResource("2_lrjie")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=955057545]
+transform = Transform3D(-0.5895488, 2.9802322e-08, -0.80773276, -0.6987334, 0.5016769, 0.50999224, 0.40522087, 0.86505514, -0.29576296, 0, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1062356753]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1549056276]
+stream = ExtResource("6_ctjv4")
+autoplay = true
+
+[node name="sa" parent="." unique_id=649075416 instance=ExtResource("6_6epbv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.825777, 0.048728943, -0.45676804)

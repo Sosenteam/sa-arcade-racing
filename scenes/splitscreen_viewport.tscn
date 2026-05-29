@@ -1,5 +1,20 @@
 [gd_scene format=3 uid="uid://bes6fdhc10pl7"]
 
+[ext_resource type="Texture2D" uid="uid://bd57vi6nbfb4u" path="res://assets/textures/golden_gate_hills_2k.hdr" id="1_s08gh"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qkv07"]
+panorama = ExtResource("1_s08gh")
+
+[sub_resource type="Sky" id="Sky_f6cyb"]
+sky_material = SubResource("PanoramaSkyMaterial_qkv07")
+
+[sub_resource type="Environment" id="Environment_hohpx"]
+background_mode = 2
+sky = SubResource("Sky_f6cyb")
+tonemap_mode = 3
+glow_enabled = true
+glow_intensity = 0.5
+
 [node name="SplitscreenView" type="SubViewportContainer" unique_id=567524846]
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +27,9 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1190288803]
 handle_input_locally = false
+audio_listener_enable_3d = true
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=399755300]
+environment = SubResource("Environment_hohpx")

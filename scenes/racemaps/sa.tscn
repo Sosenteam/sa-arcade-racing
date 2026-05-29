@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://bs6voxnonrwca"]
+
+[ext_resource type="PackedScene" uid="uid://c5dsdpb3dck8o" path="res://assets/maps/sa/sa.fbx" id="1_8438c"]
+[ext_resource type="PackedScene" uid="uid://dds4dyfw7mikl" path="res://assets/checkpoint.fbx" id="2_od0cp"]
+[ext_resource type="PackedScene" uid="uid://d3qae1ca0retj" path="res://assets/arrowsign.fbx" id="3_ehesw"]
+[ext_resource type="PackedScene" uid="uid://bki1or50esdt3" path="res://assets/finishline.fbx" id="4_bbm2k"]
+
+[sub_resource type="GDScript" id="GDScript_8438c"]
+script/source = "extends Node3D
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_od0cp"]
+size = Vector3(17.100586, 8.0867, 0.45117188)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ehesw"]
+size = Vector3(25.749023, 14.80983, 0.45117188)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bbm2k"]
+size = Vector3(25.33728, 10.827652, 0.45117188)
+
+[node name="sa" type="Node3D" unique_id=649075416]
+script = SubResource("GDScript_8438c")
+
+[node name="model" parent="." unique_id=848561170 instance=ExtResource("1_8438c")]
+
+[node name="checkpoints" type="Node3D" parent="." unique_id=1688790497]
+
+[node name="checkpoint" type="Area3D" parent="checkpoints" unique_id=1114738266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.433714, -2.6965857, -6.9348087)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints/checkpoint" unique_id=1770719440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.279892, 0)
+shape = SubResource("BoxShape3D_od0cp")
+debug_color = Color(0.84313726, 0, 0.89411765, 1)
+
+[node name="model" parent="checkpoints/checkpoint" unique_id=960190002 instance=ExtResource("2_od0cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7031713, 0)
+
+[node name="checkpoint2" type="Area3D" parent="checkpoints" unique_id=1954674468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.965935, 2.2731738, -145.71219)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints/checkpoint2" unique_id=158922378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.279892, 0)
+shape = SubResource("BoxShape3D_od0cp")
+debug_color = Color(0.84313726, 0, 0.89411765, 1)
+
+[node name="model" parent="checkpoints/checkpoint2" unique_id=1200205301 instance=ExtResource("2_od0cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7031713, 0)
+
+[node name="checkpoint3" type="Area3D" parent="checkpoints" unique_id=801816995]
+transform = Transform3D(0.0036826807, 0, -0.9999932, 0, 1, 0, 0.9999932, 0, 0.0036826807, 88.918816, 7.157573, -221.3926)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints/checkpoint3" unique_id=1785275747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.641457, 0)
+shape = SubResource("BoxShape3D_ehesw")
+debug_color = Color(0.84313726, 0, 0.89411765, 1)
+
+[node name="model" parent="checkpoints/checkpoint3" unique_id=1212441253 instance=ExtResource("2_od0cp")]
+transform = Transform3D(1.7230523, 0, 0, 0, 1.78145, 0, 0, 0, 1, 0, 7.237971, 0)
+
+[node name="checkpoint4" type="Area3D" parent="checkpoints" unique_id=2080614111]
+transform = Transform3D(0.64797366, 0, 0.7616627, 0, 1, 0, -0.7616627, 0, 0.64797366, 212.42307, 13.67062, -38.042385)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints/checkpoint4" unique_id=1481146943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3146362, 2.6503677, 0)
+shape = SubResource("BoxShape3D_bbm2k")
+debug_color = Color(0.84313726, 0, 0.89411765, 1)
+
+[node name="model" parent="checkpoints/checkpoint4" unique_id=1142029133 instance=ExtResource("2_od0cp")]
+transform = Transform3D(1.4428461, 0, 0, 0, 1.4740676, 0, 0, 0, 1, 0, 4.971146, 0)
+
+[node name="checkpoint5" type="Area3D" parent="checkpoints" unique_id=1798746356]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 79.73104, -2.6965857, 0.8422656)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints/checkpoint5" unique_id=2066627007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.279892, 0)
+shape = SubResource("BoxShape3D_od0cp")
+debug_color = Color(0.84313726, 0, 0.89411765, 1)
+
+[node name="model" parent="checkpoints/checkpoint5" unique_id=192041789 instance=ExtResource("2_od0cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7031713, 0)
+
+[node name="arrows" type="Node3D" parent="." unique_id=57733877]
+
+[node name="leftarrow" parent="arrows" unique_id=1959508300 instance=ExtResource("3_ehesw")]
+transform = Transform3D(-0.99997145, -6.621992e-10, -0.0075747073, -1.7493864e-15, -1, 8.742278e-08, -0.007574722, 8.7420275e-08, 0.99997133, 38.00068, 4.3478737, -136.6751)
+
+[node name="arrowsign" parent="arrows" unique_id=333970725 instance=ExtResource("3_ehesw")]
+transform = Transform3D(-0.21754704, 0, -0.97604996, 0, 1, 0, 0.97604996, 0, -0.21754704, -8.018891, 4.22655, -88.01367)
+
+[node name="arrowsign2" parent="arrows" unique_id=743046916 instance=ExtResource("3_ehesw")]
+transform = Transform3D(0.64340246, 0, -0.7655282, 0, 1, 0, 0.7655282, 0, 0.64340246, -21.877018, -2.63346, -121.26606)
+
+[node name="arrowsign3" parent="arrows" unique_id=1121880823 instance=ExtResource("3_ehesw")]
+transform = Transform3D(0.9572187, 0, -0.28936592, 0.09216671, 0.9479186, 0.30488625, 0.27429533, -0.31851265, 0.9073654, -29.120132, 4.22655, -89.40664)
+
+[node name="arrowsign4" parent="arrows" unique_id=299350171 instance=ExtResource("3_ehesw")]
+transform = Transform3D(-0.09164178, -0.22570547, -0.96987593, -0.04823471, 0.97383684, -0.22206958, 0.9946234, 0.026430883, -0.100130975, 28.727581, 5.688842, -229.57404)
+
+[node name="arrowsign5" parent="arrows" unique_id=1679372600 instance=ExtResource("3_ehesw")]
+transform = Transform3D(-0.8546961, -0.13959147, -0.5000094, -0.10170743, 0.98952997, -0.10239999, 0.50906867, -0.036666308, -0.8599453, 120.54626, 18.128014, -218.57228)
+
+[node name="leftarrow2" parent="arrows" unique_id=326532379 instance=ExtResource("3_ehesw")]
+transform = Transform3D(0.8963164, -6.621974e-10, -0.4434153, -3.9357026e-08, -1, -7.8062605e-08, -0.44341528, 8.7420275e-08, -0.89631635, 137.5793, 17.227337, -113.201775)
+
+[node name="arrowsign6" parent="arrows" unique_id=988197522 instance=ExtResource("3_ehesw")]
+transform = Transform3D(0.38843644, -0.0075364127, 0.92144465, -0.14494157, 0.98701936, 0.0691731, -0.9100049, -0.16042495, 0.3823019, 153.67703, 8.885655, 38.4365)
+
+[node name="arrowsign7" parent="arrows" unique_id=589761695 instance=ExtResource("3_ehesw")]
+transform = Transform3D(0.93473893, 0, 0.35533535, 0, 1, 0, -0.35533535, 0, 0.93473893, -27.653975, 0.8658495, 6.2546787)
+
+[node name="finishline" parent="." unique_id=464803777 instance=ExtResource("4_bbm2k")]
+transform = Transform3D(0.9985536, -0.052629493, 0.010991996, 0.0536427, 0.9890247, -0.13766812, -0.0036259522, 0.13805866, 0.9904173, -17.365053, -4.860606, -6.688191)
